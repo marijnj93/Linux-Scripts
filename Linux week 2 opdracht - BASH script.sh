@@ -48,6 +48,6 @@ do
 	fi
 done
 
-# Laat de inhoud van de niewe folder zien.
+# Laat de inhoud van de nieuwe folder zien.
 echo "De inhoud van de nieuwe folder is:"
 tree "$newdirectory"
