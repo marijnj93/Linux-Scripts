@@ -33,9 +33,9 @@ do
 		echo "Het bestand is ouder dan de ingevoerde maand en zal verplaatst worden."
 		fullpath=$newdirectory"/"$fileyear"/"$filenameofthemonth
 		mkdir -p $fullpath
-		checksum=($(sha256sum $f))
+		checksum=($(sha256sum $f |  cut -d " " -f1))
 		cp "$f" $fullpath
-		newchecksum=($(sha256sum $fullpath"/"$f))
+		newchecksum=($(sha256sum $fullpath"/"$f | cut -d " " -f1))
 		if [ $checksum == $newchecksum ]; then
 			echo "Checksum komt overeen dus het origineel wordt verwijderd."
 			rm $f
