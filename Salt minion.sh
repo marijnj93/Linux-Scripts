@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Sudo rights
 sudo -i
 
 # Change to tmp
@@ -12,7 +13,7 @@ curl -L https://bootstrap.saltstack.com -o install_salt.sh
 sh install_salt.sh
 
 # point to master
-echo "master: UBU1604-SALTMASTER" >> /etc/salt/minion
+echo 'master: UBU1604-SALTMASTER' >> /etc/salt/minion
 
 # Restart salt-minion
 service salt-minion restart
