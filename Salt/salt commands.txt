@@ -1,0 +1,8 @@
+# View all keys
+salt-key -L
+
+# Accept all keys
+salt-key -A
+
+# Test communication between the Master and all Minions 
+salt '*' test.ping
