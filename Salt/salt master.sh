@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# Sudo rights
-sudo -i
+############ Install Salt Master
+
+apt-get install -y curl
 
 # Change to tmp
 cd /tmp

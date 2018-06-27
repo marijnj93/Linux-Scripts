@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Sudo rights
-sudo -i
+############ Install Syslog-NG server
 
 # Change to tmp
 cd /tmp
@@ -43,3 +42,4 @@ sudo mkdir /var/log/syslog-ng
 sudo touch /var/log/syslog-ng/logs.txt
 sudo systemctl start syslog-ng
 sudo systemctl enable syslog-ng
+systemctl restart syslog-ng

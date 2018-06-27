@@ -1,5 +1,7 @@
 #!/bin/bash
 
+############ Install Nagios
+
 sudo -i
 sudo apt-get update
 sudo apt-get install wget build-essential apache2 php apache2-mod-php7.0 php-gd libgd-dev unzip
@@ -42,9 +44,9 @@ make
 make install 
 sudo update-rc.d nagios defaults
 
-# Add hosts and services
-
 mkdir -p /usr/local/nagios/etc/servers/
+
+############ Add hosts and services
 
 touch /usr/local/nagios/etc/servers/remotehost.cfg
 
