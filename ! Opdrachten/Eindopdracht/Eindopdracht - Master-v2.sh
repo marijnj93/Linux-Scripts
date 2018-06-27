@@ -13,6 +13,10 @@ curl -L https://bootstrap.saltstack.com -o install_salt.sh
 # install salt (MASTER)
 sudo sh install_salt.sh -M
 
+# Stop the salt master from also being a minion.
+systemctl stop salt-minion.service
+systemctl disable salt-minion.service
+
 ############ Install Syslog-NG server
 
 wget -qO - http://download.opensuse.org/repositories/home:/laszlo_budai:/syslog-ng/xUbuntu_16.04/Release.key | sudo apt-key add -
