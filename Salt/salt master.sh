@@ -11,4 +11,4 @@ cd /tmp
 curl -L https://bootstrap.saltstack.com -o install_salt.sh
 
 # install salt (MASTER)
-sudo sh install_salt.sh -M
+sudo sh install_salt.sh -M -N
