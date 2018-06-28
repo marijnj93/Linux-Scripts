@@ -13,9 +13,7 @@ curl -L https://bootstrap.saltstack.com -o install_salt.sh
 # install salt (MASTER)
 sudo sh install_salt.sh -M -N
 
-# Stop the salt master from also being a minion.
-systemctl stop salt-minion.service
-systemctl disable salt-minion.service
+mkdir -p /srv/salt
 
 ############ Install Syslog-NG server
 
